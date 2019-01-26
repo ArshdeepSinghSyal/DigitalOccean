@@ -2,7 +2,7 @@
 
 #### Name: Arshdeep Singh Syal
 #### Unity Id: asyal
-#### Link to screencast video: 
+#### Link to screencast video: https://drive.google.com/file/d/1-tR4tSWg1y467JpKJ8sEtP2TRXDTU_Gn/view?usp=sharing
 
 I have automated the process of creating a virtual machine on a cloud service.
 I have used 2 cloud services to demonstrate the same.<br/>
