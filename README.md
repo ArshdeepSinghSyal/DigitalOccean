@@ -15,6 +15,8 @@ I have also set up ssh based authentication for both the virtual machines.
 
 1. We start by creating an account an on the digital ocean platform.
 
+<img width="1440" alt="screenshot 2019-01-25 at 8 43 00 pm" src="https://media.github.ncsu.edu/user/12952/files/d2ed2c80-20e1-11e9-8f82-5184f48afa64">
+
 2. Then we clone the following the provisioning workshop files by using the following command:
 
 ```git clone https://github.com/CSC-DevOps/Provision```
@@ -44,16 +46,15 @@ This creates a ssh key which is added to the digital ocean account, hence making
 
 ```node main.js```
 
-
-
-<img width="1440" alt="screenshot 2019-01-25 at 8 43 00 pm" src="https://media.github.ncsu.edu/user/12952/files/d2ed2c80-20e1-11e9-8f82-5184f48afa64">
-
-```node main.js```
+We then comment the createdroplet function dfrom the code and copy the printed droplet id  from the terminal mand paste it in the code, assigning it o the variable id. Then we uncomment the dropletindo function and run the same command - ```node main.js``` to see that this time an ip address is printed on the terminal.  
 
 <img width="1440" alt="screenshot 2019-01-25 at 5 51 48 pm" src="https://media.github.ncsu.edu/user/12952/files/843f9280-20e1-11e9-9ce9-be8a15ec1a1d">
 
-```node main.js```
+7. We copy the ip address from the terminal use ssh based authentication to log into the virtual machine that has been created. 
 
+```ssh root@[IP ADDRESS]```
+
+This allows us to log in to the virtual machine without using the temporary password that digital ocean emails to its users.
 
 
 ## 2) Google Cloud Platform
