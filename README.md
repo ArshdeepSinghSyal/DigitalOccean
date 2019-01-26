@@ -59,18 +59,34 @@ This allows us to log in to the virtual machine without using the temporary pass
 
 ## 2) Google Cloud Platform
  
- 1. We start by creating an account on the google cloud platform.
-
- ```gcloud init```
- 
- ```export GOOGLE_APPLICATION_CREDENTIALS="/Users/arsh/Desktop/GoogleCloudPlatform/hw1-devops-645fc61ba81b.json"```
+ 1. We start by creating an account on the google cloud platform and enable the Google Compute Engine API. (We also create a service account and save the ssh authentication key file in our local machine)
 
 <img width="1440" alt="screenshot 2019-01-25 at 6 05 38 pm" src="https://media.github.ncsu.edu/user/12952/files/9e797080-20e1-11e9-821f-1dda094159b6">
 
+ 2. We then install the google cloud software development kit using the following command:
+ 
+ ```./google-cloud-sdk/install.sh``` 
+ 
+ We run the following command to initialize google cloud setup
+ 
+ ```gcloud init```
+ 
+ 3. Before begining we give the path of the ssh key file, for accomplishing ssh based authentication for this paticular ession of the terminal. 
+ 
+ ```export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"```
+
+4. Now we run the following command:
+
 ```node createVM.js```
+
+This creates a virtual machine instance on the google cloud platform and prints the external IP address of the instance.
 
 <img width="1435" alt="screenshot 2019-01-25 at 8 48 51 pm" src="https://media.github.ncsu.edu/user/12952/files/a4238600-20e2-11e9-8f89-474bd2824b60">
 
 <img width="1440" alt="screenshot 2019-01-25 at 8 41 25 pm" src="https://media.github.ncsu.edu/user/12952/files/991c2600-20e1-11e9-9e77-454b87104c25">
+
+5. Now we use ssh authentication to log in to the virtual machine, using the following command:
+
+``` gcloud compute ssh [NAME OF INSTANCE]```
 
 <img width="1440" alt="screenshot 2019-01-25 at 8 51 51 pm" src="https://media.github.ncsu.edu/user/12952/files/b05c1300-20e3-11e9-8242-2ac5033e979f">
